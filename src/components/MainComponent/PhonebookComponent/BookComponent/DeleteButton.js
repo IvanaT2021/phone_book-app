@@ -3,8 +3,8 @@ import styles from "./DeleteButton.module.css";
 
 const DeleteButton = () => {
   return (
-    <div className={styles.klasa_tri}>
-      <p>del</p>
+    <div>
+       <button className={styles.DeleteButton}>Obriši</button>
     </div>
   );
 };

@@ -1,6 +1,7 @@
-.klasa7 {
+.EntryButton {
   background-color: rgb(72, 151, 111);
   width: 100px;
-  
   margin: auto;
+  border: 1px solid black;
+  border-radius: 3px;
 }
