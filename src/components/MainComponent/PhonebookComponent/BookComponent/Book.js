@@ -5,10 +5,30 @@ import DeleteButton from "./DeleteButton";
 
 const Book = () => {
   return (
-    <div className={styles.klasa_dva}>
-      <h5>hello from book</h5>
-      <EditButton />
-      <DeleteButton />
+    <div>
+      <table className={styles.BookTable}>
+        <thead>
+          <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Email</th>
+            <th>Broj Telefona</th>
+            <th>Izmjene</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className={styles.BookCell}></td>
+            <td className={styles.BookCell}></td>
+            <td className={styles.BookCell}></td>
+            <td className={styles.BookCell}></td>
+            <td className={styles.BookCell}>
+              <EditButton />
+              <DeleteButton />
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };

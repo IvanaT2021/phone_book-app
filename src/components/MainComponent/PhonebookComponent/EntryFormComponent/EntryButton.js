@@ -3,8 +3,8 @@ import styles from "./EntryButton.module.css";
 
 const EntryButton = () => {
   return (
-    <div className={styles.klasa7}>
-      <p>entr</p>
+    <div>
+      <button className={styles.EntryButton}>Sačuvaj izmjene</button>
     </div>
   );
 };

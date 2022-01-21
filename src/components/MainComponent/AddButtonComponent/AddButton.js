@@ -3,8 +3,8 @@ import styles from "./AddButton.module.css";
 
 const AddButton = () => {
   return (
-    <div className={styles.klasa_cetiri}>
-      <p>add</p>
+    <div>
+       <button className={styles.AddButton}>Novi Kontakt</button>
     </div>
   );
 };

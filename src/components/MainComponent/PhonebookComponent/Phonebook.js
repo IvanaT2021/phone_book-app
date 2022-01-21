@@ -5,8 +5,7 @@ import EntryForm from "./EntryFormComponent/EntryForm";
 
 const Phonebook = () => {
   return (
-    <div className={styles.klasa__phonebook}>
-      <h5>hello from phonebook</h5>
+    <div className={styles.PhoneBook}>
       <Book/>
       <EntryForm />
     </div>
