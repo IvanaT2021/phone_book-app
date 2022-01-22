@@ -5,7 +5,7 @@ import Phonebook from "./PhonebookComponent/Phonebook"
 
 const Main = () => {
   return (
-    <div className={styles.klasa}>
+    <div className={styles.Main}>
       <AddButton />
       <Phonebook />
       
