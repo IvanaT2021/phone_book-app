@@ -1,4 +1,4 @@
-.klasa {
+.Container {
   background-color: wheat;
- 
+  display: grid;
 }
