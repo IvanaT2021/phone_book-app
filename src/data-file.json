@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "fname": "Jenny",
+      "lname": "Chan",
+      "email": "jenny.chan@email.com",
+      "phone": "333-962-7516"
+     
+    },
+    {
+      "id": 2,
+      "fname": "Jessican",
+      "lname": "Warren",
+      "email": "jessica.warren@email.com",
+      "phone": "011-211-7516"
+      
+    },
+    {
+      "id": 3,
+      "fname": "Tony",
+      "lname": "Frank11 lesly road",
+      "email": "tony.frank@email.com",
+      "phone": "788-962-7516"
+      
+    },
+    {
+      "id": 4,
+      "fname": "Jeremy",
+      "lname": "Clark",
+      "email": "jeremy.clark@email.com",
+      "phone": "011-962-111"
+      
+    },
+    {
+      "id": 5,
+      "fname": "Raymond",
+      "lname": "Edwards",
+      "email": "raymon.edwards@email.com",
+      "phone": "3231-962-7516"
+      
+    }
+  ]
+ 
