@@ -24,7 +24,7 @@ const Navbar = () => {
   
   ];
   return (
-    <div>
+    <div className={styles.Navlink}>
       <ul className={styles.ulClass}>
         {links.map((link) => {
           return <li key={link.id}>
