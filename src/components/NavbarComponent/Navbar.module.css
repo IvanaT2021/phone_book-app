@@ -1,4 +1,33 @@
-.klasa0{
-    background-color: turquoise;
-    text-align: center;
+.Navlink{
+  background-color: rgb(233, 228, 219);
 }
+.ulClass {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float:right;
+  }
+  
+  li {
+    list-style: none;
+    float: left;
+   
+  }
+  
+  li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: rgb(185, 179, 179);
+    padding: 32px;
+    font-size: 20px;
+   
+  }
+
+  li a:hover {
+    display: block;
+    padding: 32px;
+    text-decoration: underline;
+    color: rgb(185, 179, 179);
+  }

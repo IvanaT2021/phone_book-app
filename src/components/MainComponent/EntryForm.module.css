@@ -1,0 +1,104 @@
+/*form {
+  display: flex;
+  gap: 5px;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 28px;
+}*/
+.Container {
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  
+  max-width: 400px;
+  width: 25%;
+  margin: 0 auto;
+
+}
+.EntryForm {
+  background: beige;
+  padding: 25px;
+  margin: 20px 0;
+  text-align: center;
+  display: grid;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.UpperButton {
+  background: #4CAF50;
+  color: rgb(251, 243, 243);
+  width: 50px;
+  margin-left: 85%;
+  border: 1px solid #49904b;
+  box-shadow: 0 0 20px 0 rgba(73,144,75, 0.2), 0 5px 5px 0 rgba(73,144,75, 0.24);
+  border-radius: 3px;
+}
+.Header{
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+
+}
+.InputText {
+  background-color:rgb(205, 233, 246);
+  padding: 5px;
+  margin:8px 20px;
+  border: 1px solid rgb(155, 167, 170);
+  border-radius: 3px;
+}
+
+.EntryButton {
+  cursor: pointer;
+  background-color: rgb(93,166,209);
+  color: #FFF;
+  width: 100%;
+  margin: 20px 5px;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgb(93,166,209);
+  box-shadow: 0 0 20px 0 rgba(93,166,209, 0.2), 0 5px 5px 0 rgba(93,166,209, 0.24);
+  border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+/*pocinje ovdje*/
+/*
+ button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+*/

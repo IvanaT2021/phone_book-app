@@ -1,14 +1,37 @@
-import React from "react";
-import styles from "./Phonebook.module.css";
-import Book from "./BookComponent/Book";
-import EntryForm from "./EntryFormComponent/EntryForm";
+import React, { useState } from 'react';
+import styles from './Phonebook.module.css';
+import Book from './BookComponent/Book'
 
-const Phonebook = () => {
+const Phonebook = (props) => {
   return (
-    <div className={styles.klasa__phonebook}>
-      <h5>hello from phonebook</h5>
-      <Book/>
-      <EntryForm />
+    <div className={styles.PhoneBook}>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Email</th>
+            <th>Broj Telefona</th>
+            <th>Izmjene</th>
+          </tr>
+        </thead>
+        <tbody>
+          {props.contactPropsFromMain.map((contact) => (
+            <Book
+            contact={contact}
+            key={contact.id}
+           
+            setEditForm={props.setEditForm}
+            //handleFormFromPBook={props.handleFormFromMain}
+            setUpdate={props.setUpdateFromMain}
+            handleDeleteFromPBook={props.handleDeleteFromMain}
+            />
+          ))}
+          
+        </tbody>
+      </table>
+     
     </div>
   );
 };
