@@ -1,3 +1,62 @@
-.Contact{
-    text-align: center;
+.Contact {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+}
+
+.EntryForm {
+  position: absolute;
+  margin-top: 10%;
+  background: beige;
+  padding: 25px;
+  width: 500px;
+  text-align: center;
+  display: grid;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.Header {
+  color: grey;
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.InputText {
+  background-color: rgb(205, 233, 246);
+  padding: 5px;
+  margin: 20px 20px;
+  border: 1px solid rgb(155, 167, 170);
+  border-radius: 3px;
+  text-align: left;
+  width: 400px;
+}
+
+.EntryButton {
+  cursor: pointer;
+  background-image: linear-gradient(#42a1ec, #0070c9);
+  color: #fff;
+  width: 50%;
+  margin: 20px 5px;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgb(93, 166, 209);
+  box-shadow: 0 0 20px 0 rgba(93, 166, 209, 0.2),
+    0 5px 5px 0 rgba(93, 166, 209, 0.24);
+  border-radius: 3px;
+  border-radius: 3px;
+}
+
+.EntryButton:hover {
+  background-image: linear-gradient(#3899e4, #086bbd);
+  border-color: #1482d0;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.EntryButton:focus {
+  box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
+  outline: none;
 }
