@@ -5,7 +5,7 @@ import styles from "./NoMatch.module.css";
 const NoMatch = () => {
   return (
     <div className={styles.NoMatch}>
-      <h1>NoMatch</h1>
+      <p className={styles.Text}>Sorry...No Match</p>
       
     </div>
   );
