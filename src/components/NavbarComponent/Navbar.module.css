@@ -1,14 +1,41 @@
 .Navlink{
-  background-color: rgb(233, 228, 219);
-}
-.ulClass {
+  background-color: rgb(205, 235, 253);
+  padding: 20px;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  z-index: 99;
+  font-size: 20px;
+  }
+.ulList {
     list-style-type: none;
+    display: flex;
+    justify-content:space-between;
+    align-items: right;
     margin: 0;
     padding: 0;
     overflow: hidden;
     float:right;
   }
+
+  .ulList li a {
+    text-decoration: none;
+    color: rgb(24, 94, 129);
+    font-weight: bolder;
+    padding: 5px 10px;
+    margin-left:20px ;
+
+  }
+
+  .ulList li a:hover {
   
+    padding: 32px;
+    text-decoration: underline;
+    
+    transition: all 0.5s ease-in-out;
+  }
+
+  /*
   li {
     list-style: none;
     float: left;
@@ -31,3 +58,4 @@
     text-decoration: underline;
     color: rgb(185, 179, 179);
   }
+*/

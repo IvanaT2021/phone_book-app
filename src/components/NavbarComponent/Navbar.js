@@ -12,7 +12,7 @@ const Navbar = () => {
     {
       id: 2,
       path: "/about",
-      text: "O nama",
+      text: "Dokumentacija",
     },
     
     {
@@ -25,7 +25,7 @@ const Navbar = () => {
   ];
   return (
     <div className={styles.Navlink}>
-      <ul className={styles.ulClass}>
+      <ul className={styles.ulList}>
         {links.map((link) => {
           return <li key={link.id}>
             <NavLink to={link.path}  exact>{link.text}</NavLink></li>;

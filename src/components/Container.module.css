@@ -1,4 +1,13 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
 .Container {
- 
-  display: grid;
+  background-color:beige;
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }

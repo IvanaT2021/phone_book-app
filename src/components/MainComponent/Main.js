@@ -8,19 +8,10 @@ import data from './../../data-file.json';
 
 const Main = () => {
   // state for contacts
-
   const [contacts, setContacts] = useState(getInitialContacts());
+  
 
-  // seting edit/add view
-  const [useEditForm, setEditForm] = useState(false);
-  // manipulate with show/hide form
-
-  const [viewForm, setViewForm] = useState(false);
-  const handleFormAdd = () => {
-    setViewForm(true);
-  };
-
-  // state for form data
+  // state for form add data
   const [addFormData, setAddFormData] = useState({
     id: '',
     fname: '',
@@ -28,6 +19,24 @@ const Main = () => {
     email: '',
     phone: '',
   });
+
+  // seting edit/add view
+  const [useEditForm, setEditForm] = useState(false);
+
+  // manipulate with show/hide form
+  const [viewForm, setViewForm] = useState(false);
+
+  // otvara formu za novi unos
+  const handleFormAdd = () => {
+    setViewForm(true);
+  };
+
+  // upper button in edit
+  const handleClose = () => {
+    setViewForm(false);
+    
+  };
+
   // adding values to form fields
   const handleAddFormChange = (event) => {
     event.preventDefault();
@@ -39,8 +48,8 @@ const Main = () => {
   };
 
   // adding  values from form to table
-  const handleAddFormSubmit = () => {
-    //event.preventDefault();
+  const handleAddFormSubmit = (e) => {
+    e.preventDefault();
     const newContact = {
       id: uuidv4(),
       fname: addFormData.fname,
@@ -50,6 +59,7 @@ const Main = () => {
     };
     const newContacts = [...contacts, newContact];
     setContacts(newContacts);
+    setViewForm(false);
   };
 
   // filling fields in form when edit
@@ -59,29 +69,26 @@ const Main = () => {
   const setUpdateID = (param) => {
     setEditForm(true);
     setViewForm(true);
-    console.log(param);
     contacts.map((contact) => {
       if (contact.id === param) {
         return setEditContact(contact);
       }
     });
   };
- 
+
   // get edited data
   const setUpdate = (event) => {
-    
+    event.preventDefault();
     const fieldName = event.target.getAttribute('name');
     const fieldValue = event.target.value;
     const editFormData = { ...editcontact };
     editFormData[fieldName] = fieldValue;
     setEditContact(editFormData);
-    console.log(editFormData);
   };
 
   //update contact
   const updateContact = (e) => {
     e.preventDefault();
-    console.log(editcontact);
 
     setContacts(
       contacts.map((contact) => {
@@ -94,6 +101,7 @@ const Main = () => {
         return contact;
       })
     );
+    setViewForm(false);
   };
 
   // handle delete
@@ -104,6 +112,7 @@ const Main = () => {
       }),
     ]);
   };
+
 
   //getting stored contacts
   function getInitialContacts() {
@@ -120,33 +129,40 @@ const Main = () => {
 
   return (
     <div>
-      <button
-        className={styles.AddButton}
-        onClick={() => {
-          handleFormAdd(true);
-          setEditForm(false);
-        }}
-      >
-        Novi Kontakt
-      </button>
-      <div className={styles.Main}>
-        <Phonebook
-          setUpdateFromMain={setUpdateID}
-          setEditForm={setEditForm}
-          contactPropsFromMain={contacts}
-          handleDeleteFromMain={handleDelete}
-        />
-        {viewForm ? (
-          <EntryForm
-            updateContact={updateContact}
-            useEditForm={useEditForm}
-            editcontact={editcontact}
-            setUpdateFromMain={setUpdate}
-            handleAddFormChangeFromMain={handleAddFormChange}
-            handleAddFormSubmitFromMain={handleAddFormSubmit}
+      <div>
+        <button
+          className={styles.AddButton}
+          onClick={() => {
+            handleFormAdd(true);
+            setEditForm(false);
+          }}
+        >
+          Novi Kontakt
+        </button>
+      </div>
+      <div className={styles.MainTableForm}>
+        <div className={styles.MainTable}>
+          <Phonebook
+            setUpdateFromMain={setUpdateID}
+            setEditForm={setEditForm}
+            contactPropsFromMain={contacts}
+            handleDeleteFromMain={handleDelete}
           />
+        </div>
+        {viewForm ? (
+          <div className={styles.MainForm}>
+            <EntryForm
+              handleClose={handleClose}
+              updateContact={updateContact}
+              useEditForm={useEditForm}
+              editcontact={editcontact}
+              setUpdateFromMain={setUpdate}
+              handleAddFormChangeFromMain={handleAddFormChange}
+              handleAddFormSubmitFromMain={handleAddFormSubmit}
+            />
+          </div>
         ) : (
-          <div></div>
+          <div className={styles.MainForm}></div>
         )}
       </div>
     </div>
